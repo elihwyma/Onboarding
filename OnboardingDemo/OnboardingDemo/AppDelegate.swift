@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         let onboardingVC = OnboardingViewController(title: "Test", description: "Example Description", symbolName: "square.and.arrow.down.on.square")
-        onboardingVC.addBulletin(title: "Test", description: "Super Cool Description", symbol: "square.and.arrow.down.on.square")
-        onboardingVC.addBulletin(title: "Woah its a list?", description: "Lorem Ipsum Deez Nutz", symbol: "externaldrive")
-        onboardingVC.addBulletin(title: "Boo", description: "Aaaaaaaaaaa", symbol: "eye")
+        onboardingVC.addBulletin(.init(title: "Test", description: "Super Cool Description", symbol: "square.and.arrow.down.on.square"))
+        onboardingVC.addBulletin(.init(title: "Woah its a list?", description: "Lorem Ipsum Deez Nutz", symbol: "externaldrive"))
+        onboardingVC.addBulletin(.init(title: "Boo", description: "Aaaaaaaaaaa", symbol: "eye"))
         
         let button = OnboardingButton(type: .filled(color: .systemBlue), title: "BOob")
         onboardingVC.addButton(button)
