@@ -178,6 +178,18 @@ public class OnboardingViewController: UIViewController {
         buttonTray.addArrangedSubview(button)
     }
     
+    /// Add a loading indicator to the bulletin list
+    public func addLoadingIndicator() {
+        let loadingIndicator: UIActivityIndicatorView
+        if #available(iOS 13, *) {
+            loadingIndicator = UIActivityIndicatorView(style: .large)
+        } else {
+            loadingIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        }
+        loadingIndicator.startAnimating()
+        bulletList.addArrangedSubview(loadingIndicator)
+    }
+    
 }
 
 extension OnboardingViewController: UIScrollViewDelegate {
