@@ -33,9 +33,10 @@ internal class OnboardingImageView: UIImageView {
         switch type {
         case .header:
             NSLayoutConstraint.activate([
-                heightAnchor.constraint(equalToConstant: 90)
+                heightAnchor.constraint(equalToConstant: 90),
+                widthAnchor.constraint(equalToConstant: 90)
             ])
-            contentMode = .center
+            contentMode = .scaleAspectFit
         case .bulletItem:
             NSLayoutConstraint.activate([
                 widthAnchor.constraint(equalToConstant: 40),
