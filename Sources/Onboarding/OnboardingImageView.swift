@@ -45,6 +45,8 @@ internal class OnboardingImageView: UIImageView {
                 heightAnchor.constraint(equalToConstant: 43)
             ])
             contentMode = .scaleAspectFit
+            layer.masksToBounds = true
+            layer.cornerRadius = 5.5
         }
     }
     
