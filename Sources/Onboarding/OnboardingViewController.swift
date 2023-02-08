@@ -31,6 +31,7 @@ public class OnboardingViewController: UIViewController {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
+        stackView.alignment = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 13.5
         return stackView
