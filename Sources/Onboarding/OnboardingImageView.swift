@@ -37,6 +37,8 @@ internal class OnboardingImageView: UIImageView {
                 widthAnchor.constraint(equalToConstant: 90)
             ])
             contentMode = .scaleAspectFit
+            layer.masksToBounds = true
+            layer.cornerRadius = 11.25
         case .bulletItem:
             NSLayoutConstraint.activate([
                 widthAnchor.constraint(equalToConstant: 40),
