@@ -61,7 +61,6 @@ public class OnboardingViewController: UIViewController {
     ///   - symbolName: Name of the symbol
     /// - Note:
     /// Any omitted fields will not show in the view controller
-    @available(iOS 13, *)
     public init(title: String? = nil, description: String? = nil, symbolName: String? = nil) {
         self.symbolName = symbolName
         self.headerTitle = title

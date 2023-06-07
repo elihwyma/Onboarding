@@ -14,14 +14,17 @@ internal enum ImageType {
 
 internal class OnboardingImageView: UIImageView {
     
-    @available(iOS 13, *)
     internal convenience init(symbolName: String, type: ImageType) {
-        var symbolConfig: UIImage.SymbolConfiguration?
-        if type == .header {
-            symbolConfig = UIImage.SymbolConfiguration(pointSize: 46, weight: .regular)
+        if #available(iOS 13, *) {
+            var symbolConfig: UIImage.SymbolConfiguration?
+            if type == .header {
+                symbolConfig = UIImage.SymbolConfiguration(pointSize: 46, weight: .regular)
+            }
+            let image = UIImage(systemName: symbolName, withConfiguration: symbolConfig)
+            self.init(image: image, type: type)
+        } else {
+            self.init(image: nil, type: type)
         }
-        let image = UIImage(systemName: symbolName, withConfiguration: symbolConfig)
-        self.init(image: image, type: type)
     }
     
     internal init(image: UIImage?, type: ImageType) {
