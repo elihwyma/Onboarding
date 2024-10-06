@@ -125,6 +125,7 @@ public class OnboardingViewController: UIViewController {
             label.textColor = .labelColor
             label.translatesAutoresizingMaskIntoConstraints = false
             label.font = UIFont.systemFont(ofSize: 34, weight: .bold)
+            label.adjustsFontSizeToFitWidth = true
             headerView.addArrangedSubview(label)
             constraints.append(label.heightAnchor.constraint(equalToConstant: 40))
         }
@@ -143,8 +144,8 @@ public class OnboardingViewController: UIViewController {
         relativeTopAnchor = headerView.bottomAnchor
         constraints += [
             view.safeAreaLayoutGuide.topAnchor.constraint(equalTo: headerView.topAnchor, constant: scaled(-25.8)),
-            view.safeAreaLayoutGuide.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: -25),
-            view.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: 25),
+            view.safeAreaLayoutGuide.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: -12.5),
+            view.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: 12.5),
             
             scrollView.topAnchor.constraint(equalTo: relativeTopAnchor, constant: scaled(19.2)),
             scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: scaled(18.3)),
